@@ -28,15 +28,15 @@
 #
 # Copyright (c) 2021 ETH Zurich, Nikita Rudin
 
-import numpy as np
-from numpy.random import choice
-from scipy import interpolate
+import numpy as np#使用numpy数组
+from numpy.random import choice#输出随机数或者随机数组
+from scipy import interpolate#输出样条插值
 
-from isaacgym import terrain_utils
-from legged_gym.envs.base.legged_robot_config import LeggedRobotCfg
+from isaacgym import terrain_utils#地形单元
+from legged_gym.envs.base.legged_robot_config import LeggedRobotCfg#添加自己的机器人模型并训练
 
 class Terrain:
-    def __init__(self, cfg: LeggedRobotCfg.terrain, num_robots) -> None:
+    def __init__(self, cfg: LeggedRobotCfg.terrain, num_robots) -> None:#为函数定义属性
 
         self.cfg = cfg
         self.num_robots = num_robots
